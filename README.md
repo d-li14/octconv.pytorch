@@ -1,9 +1,15 @@
 # octconv.pytorch
 [PyTorch](pytorch.org) implementation of Octave Convolution in [Drop an Octave: Reducing Spatial Redundancy in Convolutional Neural Networks with Octave Convolution](https://arxiv.org/abs/1904.05049)
 
+## ResNet-50 on ImageNet
+| Architecture             | LR decay strategy   | Parameters | GFLOPs | Top-1 / Top-5 Error (%) |
+| ------------------------ | ------------------- | ---------- | ------ | ----------------------- |
+| ResNet-50                | step (90 epochs)    | 25.557M    | 4.089  | 76.010 / 92.834         |
+| ResNet-50                | cosine (120 epochs) | 25.557M    | 4.089  | 77.150 / 93.468         |
+| OctResNet-50 (alpha=0.5) | cosine (120 epochs) | 25.557M    | 2.367  | 77.640 / 93.662         |
+
 ## To be Done
-- [ ] Support for MobileNet family
-- [ ] Training on ImageNet dataset (in progress)
+- [ ] Support for MobileNet family (pending for architectural details from the author)
 
 ## Acknowledgement
 [Official MXNet implmentation](https://github.com/facebookresearch/OctConv) by [@cypw](https://github.com/cypw)
