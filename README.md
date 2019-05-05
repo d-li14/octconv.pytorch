@@ -8,7 +8,7 @@
 | [ResNet-50](https://drive.google.com/open?id=1_aconGn2oZB1Bvgq65g2tsqSI7CSPAEt)                | cosine (120 epochs) | 25.557M    | 4.089  | 77.150 / 93.468         |
 | [OctResNet-50 (alpha=0.5)](https://drive.google.com/open?id=1F9esqmbIJmfTOsAZ6_6JEUnI83LVgF_S) | cosine (120 epochs) | 25.557M    | 2.367  | 77.640 / 93.662         |
 
-
+![](fig/ablation.png)
 
 ## To be Done
 - [ ] Support for MobileNet family (pending for architectural details from the author)
