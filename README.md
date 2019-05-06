@@ -2,7 +2,7 @@
 [PyTorch](pytorch.org) implementation of Octave Convolution in [Drop an Octave: Reducing Spatial Redundancy in Convolutional Neural Networks with Octave Convolution](https://arxiv.org/abs/1904.05049)
 
 ## ResNet-50 on ImageNet
-| Architecture             | LR decay strategy   | Parameters | GFLOPs | Top-1 / Top-5 Error (%) |
+| Architecture             | LR decay strategy   | Parameters | GFLOPs | Top-1 / Top-5 Accuracy (%) |
 | ------------------------ | ------------------- | ---------- | ------ | ----------------------- |
 | [ResNet-50](https://drive.google.com/open?id=1n7H6WNrvtf0eyWeWotbWD1kb95iVWaze)                | step (90 epochs)    | 25.557M    | 4.089  | 76.010 / 92.834         |
 | [ResNet-50](https://drive.google.com/open?id=1_aconGn2oZB1Bvgq65g2tsqSI7CSPAEt)                | cosine (120 epochs) | 25.557M    | 4.089  | 77.150 / 93.468         |
