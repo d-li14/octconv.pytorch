@@ -17,9 +17,9 @@ class Bottleneck(nn.Module):
         # Both self.conv2 and self.downsample layers downsample the input when stride != 1
         self.conv1 = Conv_BN_ACT(inplanes, width, kernel_size=1, alpha_in=alpha_in, alpha_out=alpha_out, norm_layer=norm_layer)
         self.conv2 = Conv_BN_ACT(width, width, kernel_size=3, stride=stride, padding=1, groups=groups, norm_layer=norm_layer,
-                                 alpha_in=0 if output else 0.5, alpha_out=0 if output else 0.5)
+                                 alpha_in=0.5, alpha_out=0 if output else 0.5)
         self.conv3 = Conv_BN(width, planes * self.expansion, kernel_size=1, norm_layer=norm_layer,
-                             alpha_in=0 if output else 0.5, alpha_out=0 if output else 0.5)
+                             alpha_in=0.5, alpha_out=0 if output else 0.5)
         self.relu = nn.ReLU(inplace=True)
         self.downsample = downsample
         self.stride = stride
@@ -103,7 +103,7 @@ class OctResNet(nn.Module):
         for _ in range(1, blocks):
             layers.append(block(self.inplanes, planes, groups=self.groups,
                                 base_width=self.base_width, norm_layer=norm_layer,
-                                alpha_in=0 if output else 0.5, alpha_out=0 if output else 0.5, output=output))
+                                alpha_in=0.5, alpha_out=0 if output else 0.5, output=output))
 
         return nn.Sequential(*layers)
 
