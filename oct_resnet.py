@@ -1,5 +1,5 @@
 import torch.nn as nn
-from .octconv import *
+from octconv import *
 
 
 __all__ = ['OctResNet', 'oct_resnet26', 'oct_resnet50', 'oct_resnet101', 'oct_resnet152', 'oct_resnet200']
@@ -44,9 +44,6 @@ class Bottleneck(nn.Module):
         return x_h, x_l
 
 
-        return x_h
-
-
 class OctResNet(nn.Module):
 
     def __init__(self, block, layers, num_classes=1000, zero_init_residual=False,
@@ -84,8 +81,6 @@ class OctResNet(nn.Module):
             for m in self.modules():
                 if isinstance(m, Bottleneck):
                     nn.init.constant_(m.bn3.weight, 0)
-                elif isinstance(m, BasicBlock):
-                    nn.init.constant_(m.bn2.weight, 0)
 
     def _make_layer(self, block, planes, blocks, stride=1, alpha_in=0.5, alpha_out=0.5, norm_layer=None, output=False):
         if norm_layer is None:
