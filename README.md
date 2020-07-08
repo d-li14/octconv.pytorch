@@ -9,6 +9,8 @@
 | [Oct-ResNet-50 (alpha=0.5)](https://drive.google.com/open?id=1F9esqmbIJmfTOsAZ6_6JEUnI83LVgF_S) | cosine (120 epochs) | 25.557M    | 2.367  | 77.640 / 93.662         |
 | [ResNet-101](https://drive.google.com/file/d/128pkjPIN8hvjmbsSmUb62cikmiPjlgb1/view?usp=sharing) | cosine (120 epochs) | 44.549M | 7.801 | 78.898 / 94.304 |
 | [Oct-ResNet-101 (alpha=0.5)](https://drive.google.com/file/d/1E3To8EZDlVX8EfIU4q4r6SHDUHStKOqG/view?usp=sharing) | cosine (120 epochs) | 44.549M | 3.991 | 78.794 / 94.330 |
+| [ResNet-152](https://drive.google.com/file/d/1RZwAaVs1sUjUBlXTRR-zq0-S2d38Zb8Y/view?usp=sharing) | cosine (120 epochs) | 60.193M | 11.514 | 79.234 / 94.556 |
+| [Oct-ResNet-152 (alpha=0.5)](https://drive.google.com/file/d/1lmNaN8W-ky91je2hbPfUv4va6Uj4_qw1/view?usp=sharing) | cosine (120 epochs) | 60.193M | 5.615 | 79.258 / 94.480 |
 
 
 <p align="center"><img src="fig/ablation.png" width="600" /></p>
